@@ -1,0 +1,43 @@
+theme = "catppuccin_frappe"
+
+[editor]
+true-color = true
+line-number = "relative"
+auto-format = true
+auto-save = true
+bufferline = "multiple"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+
+[keys.normal]
+C-b = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+C-s = ":w"
+S-l = ":buffer-next"
+S-h = ":buffer-previous"
+C-n = ["move_prev_word_start", "move_next_word_end", "search_selection", "extend_search_next"]
+esc = ["collapse_selection", "keep_primary_selection"]
+
+[keys.normal.space]
+C-o = ":config-open"
+C-r = ":config-reload"
+"." = "file_picker_in_current_buffer_directory"
+
+[keys.normal.space.t]
+w = ":toggle-option soft-wrap.enable"
+"." = ":toggle file-picker.hidden"
+
+[keys.normal.space.l]
+r = ":lsp-restart"
+
+[keys.insert]
+C-s = [":w", "normal_mode"]

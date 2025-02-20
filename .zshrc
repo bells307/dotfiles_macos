@@ -118,7 +118,7 @@ export FZF_DEFAULT_OPTS=" \
 alias cd="z"
 alias ls="eza --color=always --icons=always"
 alias cat="bat"
-alias dotfiles="git --git-dir=$HOME/dotfiles --work-tree=$HOME"
+alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"

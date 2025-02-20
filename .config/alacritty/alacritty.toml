@@ -1,7 +1,7 @@
 import = ["~/.config/alacritty/catppuccin-macchiato.toml"]
 
 [env]
-TERM = "xterm-256color"
+# TERM = "xterm-256color"
 
 [window]
 opacity = 1
@@ -24,16 +24,16 @@ multiplier = 3
 [font]
 size = 14
 
-normal.family = "FiraCode Nerd Font"
+normal.family = "Fira Code"
 normal.style = "Regular"
 
-bold.family = "FiraCode Nerd Font"
+bold.family = "Fira Code"
 bold.style = "Bold"
 
-italic.family = "FiraCode Nerd Font"
+italic.family = "Fira Code"
 italic.style = "Italic"
 
-bold_italic.family = "FiraCode Nerd Font"
+bold_italic.family = "Fira Code"
 bold_italic.style = "Bold Italic"
 
 # normal.family = "Hack Nerd Font"

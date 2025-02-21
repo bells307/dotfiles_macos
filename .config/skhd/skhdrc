@@ -29,10 +29,10 @@ shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 # -- modifying window size
 
 # maximize a window
-shift + alt - m : yabai -m window --toggle zoom-fullscreen
+alt - m : yabai -m window --toggle zoom-fullscreen
 
 # balance out tree of windows (resize to occupy same area)
-shift + alt - e : yabai -m space --balance
+alt - e : yabai -m space --balance
 
 # -- moving windows around
 
@@ -42,13 +42,7 @@ shift + alt - e : yabai -m space --balance
 # shift + alt - h : yabai -m window --swap west
 # shift + alt - l : yabai -m window --swap east
 
-# move window and split
-# ctrl + alt - j : yabai -m window --warp south
-# ctrl + alt - k : yabai -m window --warp north
-# ctrl + alt - h : yabai -m window --warp west
-# ctrl + alt - l : yabai -m window --warp east
-
-# move window to display left and right
+# move window to display
 shift + alt - j : yabai -m window --display south; yabai -m display --focus south;
 shift + alt - k : yabai -m window --display north; yabai -m display --focus north;
 shift + alt - h : yabai -m window --display west; yabai -m display --focus west;
@@ -66,7 +60,3 @@ shift + alt - 4 : yabai -m window --space 4 --focus;
 shift + alt - 5 : yabai -m window --space 5 --focus;
 shift + alt - 6 : yabai -m window --space 6 --focus;
 shift + alt - 7 : yabai -m window --space 7 --focus;
-
-alt - q : open /Applications/kitty.app/
-alt - w : open /Applications/Firefox.app/
-alt - e : open /Applications/Telegram.app/

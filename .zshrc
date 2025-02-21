@@ -106,6 +106,12 @@ bindkey "^[[1;3D" backward-word
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias cd="z"
+alias ls="eza --color=always --icons=always"
+alias cat="bat"
+alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias ya=yazi
 alias v=nvim
 alias t=tmux
 
@@ -116,12 +122,15 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#51576d \
 --multi"
 
-alias cd="z"
-alias ls="eza --color=always --icons=always"
-alias cat="bat"
-alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(tmuxifier init -)"
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}

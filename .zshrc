@@ -72,7 +72,7 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:z:*' fzf-preview 'ls --color $realpath'
 
 # aliases
-# alias cd="z"
+alias cd="z"
 alias ls="ls --color"
 # alias ls="eza --color=always --icons=always"
 # alias cat="bat"
@@ -84,7 +84,7 @@ alias c=clear
 
 # shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
 
 HB_CNF_HANDLER="$(brew --repository)/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
 if [ -f "$HB_CNF_HANDLER" ]; then

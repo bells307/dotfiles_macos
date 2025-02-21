@@ -9,7 +9,8 @@ return {
     end,
     opts = {
       flavour = "frappe",
-      -- transparent_background = true,
+      -- transparent
+      transparent_background = true,
       integrations = {
         cmp = true,
         barbar = true,

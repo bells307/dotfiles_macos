@@ -27,7 +27,7 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
   ui = {
-    -- better for transparent background
-    -- border = "rounded",
+    -- transparent
+    border = "rounded",
   },
 })

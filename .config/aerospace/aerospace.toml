@@ -47,12 +47,21 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 10
-inner.vertical = 10
-outer.left = 10
-outer.bottom = 10
-outer.top = 10
-outer.right = 10
+inner.horizontal = 12
+inner.vertical = 12
+outer.left = 12
+outer.bottom = 12
+outer.top = 12
+outer.right = 12
+
+[workspace-to-monitor-force-assignment]
+Q = 'main'
+W = 'main'
+E = 'main'
+A = 'secondary'
+S = 'secondary'
+D = 'secondary'
+
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -84,9 +93,6 @@ outer.right = 10
 # end tell'
 # '''
 
-ctrl-q = 'exec-and-forget open -na "Firefox"'
-ctrl-w = 'exec-and-forget open -na "kitty"'
-
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
@@ -117,6 +123,7 @@ ctrl-shift-l = "move-node-to-monitor right"
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
+alt-shift-0 = 'balance-sizes'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-q = 'workspace Q'

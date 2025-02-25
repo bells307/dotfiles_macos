@@ -16,8 +16,13 @@ local function lsp_config(_, opts)
 
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = event.buf, desc = "Go to definition" })
       vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = event.buf, desc = "Go to declaration" })
-      vim.keymap.set("n", "fd", fzf.diagnostics_document, { buffer = event.buf, desc = "Diagnostics (buffer)" })
-      vim.keymap.set("n", "fD", fzf.diagnostics_workspace, { buffer = event.buf, desc = "Diagnostics (workspace)" })
+      vim.keymap.set("n", "<leader>fd", fzf.diagnostics_document, { buffer = event.buf, desc = "Diagnostics (buffer)" })
+      vim.keymap.set(
+        "n",
+        "<leader>fD",
+        fzf.diagnostics_workspace,
+        { buffer = event.buf, desc = "Diagnostics (workspace)" }
+      )
       vim.keymap.set("n", "gr", fzf.lsp_references, { buffer = event.buf, desc = "Go to references" })
       vim.keymap.set("n", "gI", fzf.lsp_implementations, { buffer = event.buf, desc = "Go to implentations" })
       vim.keymap.set("n", "gy", fzf.lsp_typedefs, { buffer = event.buf, desc = "Type definition" })

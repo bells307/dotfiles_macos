@@ -109,7 +109,7 @@ return {
       servers = {
         rust_analyzer = {
           settings = {
-            ["rust-analyzer"] = {
+            rust_analyzer = {
               cargo = {
                 allFeatures = true,
                 loadOutDirsFromCheck = true,

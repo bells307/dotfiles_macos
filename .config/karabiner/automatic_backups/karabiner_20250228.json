@@ -39,14 +39,6 @@
                         "is_pointing_device": true
                     },
                     "ignore": false
-                },
-                {
-                    "identifiers": {
-                        "device_address": "c0-02-5f-65-95-9c",
-                        "is_keyboard": true,
-                        "is_pointing_device": true
-                    },
-                    "ignore": false
                 }
             ],
             "name": "Default profile",

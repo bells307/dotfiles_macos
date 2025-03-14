@@ -73,7 +73,7 @@ zstyle ':fzf-tab:complete:z:*' fzf-preview 'ls --color $realpath'
 alias cd="z"
 alias ls="ls --color"
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias ya=yazi
+alias y=yazi
 alias v=nvim
 alias t=tmux
 alias c=clear

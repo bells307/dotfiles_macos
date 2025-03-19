@@ -165,11 +165,31 @@ return {
           type = "lldb",
           request = "launch",
           program = function()
-            return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+            return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/target/debug/", "file")
           end,
           cwd = "${workspaceFolder}",
+          stopOnEntry = false,
+          args = {},
         },
       }
+    end,
+  },
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "rouge8/neotest-rust",
+    },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-rust")({
+            -- Optional: Specify additional arguments for cargo-nextest
+            args = { "--no-capture" },
+            -- Optional: Specify a different DAP adapter, e.g., "lldb"
+            dap_adapter = "lldb",
+          }),
+        },
+      })
     end,
   },
 }

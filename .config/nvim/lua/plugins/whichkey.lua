@@ -24,6 +24,8 @@ return {
         { "<leader>s_", hidden = true },
         { "<leader>r", group = "Rust" },
         { "<leader>r_", hidden = true },
+        { "<leader>n", group = "Neotest" },
+        { "<leader>n_", hidden = true },
       })
     end,
   },

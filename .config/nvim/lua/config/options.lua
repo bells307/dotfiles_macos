@@ -3,6 +3,7 @@
 
 local opt = vim.opt
 
+opt.laststatus = 3
 opt.termsync = false
 
 opt.termguicolors = true

@@ -20,6 +20,8 @@ export EDITOR='nvim'
 
 ZINIT_HOME="${HOME}/.local/share/zinit/zinit.git"
 
+ZVM_CURSOR_STYLE_ENABLED=false
+
 # history
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -39,6 +41,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
+zinit light jeffreytse/zsh-vi-mode
 
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
@@ -52,9 +55,12 @@ zinit cdreplay -q
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # keybindings
-bindkey -e
+# bindkey -v
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+bindkey '^y' autosuggest-accept
+# bindkey "\e[1;3C" forward-word
+# bindkey "\e[1;3D" backward-word
 
 setopt appendhistory
 setopt sharehistory

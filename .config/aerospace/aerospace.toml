@@ -49,20 +49,24 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 [gaps]
 inner.horizontal = 12
 inner.vertical = 12
-outer.left = 12
-outer.bottom = 12
-outer.top = 12
-outer.right = 12
+outer.left = [{ monitor."lg" = 70 }, 12]
+outer.bottom = [{ monitor."lg" = 70 }, 12]
+outer.top = [{ monitor."lg" = 70 }, 12]
+outer.right = [{ monitor."lg" = 70 }, 12]
 
 [workspace-to-monitor-force-assignment]
 Q = 'main'
 W = 'main'
 E = 'main'
 R = 'main'
-A = 'secondary'
-S = 'secondary'
-D = 'secondary'
-F = 'secondary'
+A = ['built-in', 'secondary']
+S = ['built-in', 'secondary']
+D = ['built-in', 'secondary']
+F = ['built-in', 'secondary']
+1 = ['arzopa', 'secondary']
+2 = ['arzopa', 'secondary']
+3 = ['arzopa', 'secondary']
+4 = ['arzopa', 'secondary']
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -99,8 +103,10 @@ cmd-ctrl-alt-shift-b = 'exec-and-forget open /Applications/Safari.app'
 cmd-ctrl-alt-shift-g = 'exec-and-forget open /Applications/Telegram.app'
 cmd-ctrl-alt-shift-o = 'exec-and-forget open /Applications/Obsidian.app'
 cmd-ctrl-alt-shift-m = 'exec-and-forget open /Applications/Thunderbird.app'
-cmd-ctrl-alt-shift-v = 'exec-and-forget open /Applications/Visual Studio Code.app'
-cmd-ctrl-alt-shift-f = 'exec-and-forget open /Applications/Finder.app'
+cmd-ctrl-alt-shift-c = 'exec-and-forget open "/Applications/Visual Studio Code.app"'
+cmd-ctrl-alt-shift-v = 'exec-and-forget open "/Applications/VK Мессенджер.app"'
+cmd-ctrl-alt-shift-f = 'exec-and-forget open /System/Library/CoreServices/Finder.app'
+cmd-ctrl-alt-shift-r = 'exec-and-forget open /Applications/SomaFM.app'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-comma = 'layout accordion horizontal vertical'
@@ -144,6 +150,10 @@ alt-a = 'workspace A'
 alt-s = 'workspace S'
 alt-d = 'workspace D'
 alt-f = 'workspace F'
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-q = 'move-node-to-workspace Q'
@@ -154,6 +164,10 @@ alt-shift-a = 'move-node-to-workspace A'
 alt-shift-s = 'move-node-to-workspace S'
 alt-shift-d = 'move-node-to-workspace D'
 alt-shift-f = 'move-node-to-workspace F'
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
 
 ctrl-alt-shift-h = 'move-workspace-to-monitor left'
 ctrl-alt-shift-j = 'move-workspace-to-monitor down'

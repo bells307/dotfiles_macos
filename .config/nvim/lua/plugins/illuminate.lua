@@ -1,41 +1,28 @@
-return {
-  {
-    "RRethy/vim-illuminate",
-    event = "BufReadPre",
-    opts = {
-      delay = 200,
-      large_file_cutoff = 2000,
-      large_file_overrides = {
-        providers = { "lsp" },
-      },
-    },
-    config = function(_, opts)
-      require("illuminate").configure(opts)
+-- vim-illuminate
+-- https://github.com/RRethy/vim-illuminate
+local illuminate = require("illuminate")
 
-      local function map(key, dir, buffer)
-        vim.keymap.set("n", key, function()
-          require("illuminate")["goto_" .. dir .. "_reference"](false)
-        end, { desc = dir:sub(1, 1):upper() .. dir:sub(2) .. " Reference", buffer = buffer })
-      end
+illuminate.configure({
+	delay = 200,
+	large_file_cutoff = 2000,
+	large_file_overrides = {
+		providers = { "lsp" },
+	},
+})
 
-      map("]]", "next")
-      map("[[", "prev")
+local function map(key, dir, buffer)
+	vim.keymap.set("n", key, function()
+		illuminate["goto_" .. dir .. "_reference"](false)
+	end, { desc = dir:sub(1, 1):upper() .. dir:sub(2) .. " Reference", buffer = buffer })
+end
 
-      vim.api.nvim_create_autocmd("FileType", {
-        callback = function()
-          local buffer = vim.api.nvim_get_current_buf()
-          map("]]", "next", buffer)
-          map("[[", "prev", buffer)
-        end,
-      })
-    end,
-    keys = {
-      { "]]", desc = "Next Reference" },
-      { "[[", desc = "Prev Reference" },
-    },
-  },
-  {
-    "neovim/nvim-lspconfig",
-    opts = { document_highlight = { enabled = false } },
-  },
-}
+map("]]", "next")
+map("[[", "prev")
+
+vim.api.nvim_create_autocmd("FileType", {
+	callback = function()
+		local buffer = vim.api.nvim_get_current_buf()
+		map("]]", "next", buffer)
+		map("[[", "prev", buffer)
+	end,
+})

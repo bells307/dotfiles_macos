@@ -49,10 +49,10 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 [gaps]
 inner.horizontal = 12
 inner.vertical = 12
-outer.left = [{ monitor."lg" = 70 }, 12]
-outer.bottom = [{ monitor."lg" = 70 }, 12]
-outer.top = [{ monitor."lg" = 70 }, 12]
-outer.right = [{ monitor."lg" = 70 }, 12]
+outer.left = [{ monitor."lg" = 30 }, 12]
+outer.bottom = [{ monitor."lg" = 30 }, 12]
+outer.top = [{ monitor."lg" = 30 }, 12]
+outer.right = [{ monitor."lg" = 30 }, 12]
 
 [workspace-to-monitor-force-assignment]
 Q = 'main'

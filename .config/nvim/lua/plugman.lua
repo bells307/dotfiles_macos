@@ -1,6 +1,7 @@
 local plugins = {}
+local M = {}
 
-local function setup(opts)
+function M.setup(opts)
 	plugins = opts
 end
 
@@ -71,6 +72,4 @@ end
 
 vim.api.nvim_create_user_command('SyncPlugins', sync, {})
 
-return {
-	setup = setup
-}
+return M

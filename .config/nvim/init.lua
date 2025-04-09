@@ -1,5 +1,5 @@
 require("plugman").setup({
-	{ "catppuccin/nvim",                             "theme", "catppuccin" },
+	{ "catppuccin/nvim",                             "theme", nil, "catppuccin" },
 	{ "neanias/everforest-nvim",                     "theme" },
 	{ "folke/tokyonight.nvim",                       "theme" },
 	{ "echasnovski/mini.nvim",                       "plugin" },

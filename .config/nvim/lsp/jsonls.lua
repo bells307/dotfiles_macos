@@ -5,7 +5,13 @@ return {
 	root_markers = { '.git' },
 	settings = {
 		json = {
-			format = { enable = true },
+			format = {
+				enable = true,
+				indent = {
+					tabSize = 2,
+					insertSpaces = true,
+				}
+			},
 			validate = { enable = true },
 		},
 	},

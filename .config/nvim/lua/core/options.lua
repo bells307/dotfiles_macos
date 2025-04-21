@@ -6,6 +6,7 @@ vim.o.foldlevel = 99                           -- start editing with all folds o
 vim.o.foldmethod = "expr"                      -- use tree-sitter for folding method
 vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
+vim.o.clipboard = "unnamed"
 
 -- NOTE: Setting vim options can be opinionated.
 -- While options above are crucial to make this whole config work as expected,
@@ -54,5 +55,3 @@ vim.g.maplocalleader = vim.keycode("<cr>")
 
 -- remove netrw banner for cleaner looking
 vim.g.netrw_banner = 0
-
-vim.cmd.colorscheme "catppuccin-frappe"

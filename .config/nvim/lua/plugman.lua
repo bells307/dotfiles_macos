@@ -11,7 +11,6 @@ local function sync()
 		error("Git is not installed")
 	end
 
-
 	local base_dir = vim.fn.stdpath('data') .. '/site/pack/'
 	local install_dirs = {
 		plugin = base_dir .. 'plugins/start/',

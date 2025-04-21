@@ -18,6 +18,12 @@ export FZF_DEFAULT_OPTS=" \
 
 export EDITOR='nvim'
 
+export http_proxy="http://127.0.0.1:1080"
+export https_proxy="http://127.0.0.1:1080"
+export HTTP_PROXY="http://127.0.0.1:1080"
+export HTTPS_PROXY="http://127.0.0.1:1080"
+export NO_PROXY="localhost,127.0.0.1"
+
 ZINIT_HOME="${HOME}/.local/share/zinit/zinit.git"
 
 # history
@@ -43,7 +49,7 @@ zinit light Aloxaf/fzf-tab
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
-zinit snippet OMZP::vi-mode
+# zinit snippet OMZP::vi-mode
 
 autoload -U compinit && compinit
 

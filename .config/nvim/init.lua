@@ -2,6 +2,7 @@ require("plugman").setup({
 	{ "catppuccin/nvim",                             "theme", nil, "catppuccin" },
 	{ "neanias/everforest-nvim",                     "theme" },
 	{ "folke/tokyonight.nvim",                       "theme" },
+	{ "Mofiqul/vscode.nvim",                         "theme" },
 	{ "echasnovski/mini.nvim",                       "plugin" },
 	{ "ibhagwan/fzf-lua",                            "plugin" },
 	{ "stevearc/conform.nvim",                       "plugin" },
@@ -24,14 +25,18 @@ require("plugman").setup({
 	{ "yavorski/lualine-macro-recording.nvim",       "plugin" },
 	{ "linrongbin16/lsp-progress.nvim",              "plugin" },
 	{ "smoka7/hop.nvim",                             "plugin" },
+	{ "yetone/avante",                               "plugin" },
+	{ "github/copilot.vim",                          "plugin" },
 })
 
 require("core.options")
+require("core.keymaps")
 require("core.lsp")
 
 require("plugins.mini")
 require("plugins.fzf")
 require("plugins.catppuccin")
+-- require("plugins.vscode")
 require("plugins.conform")
 require("plugins.illuminate")
 require("plugins.yanky")

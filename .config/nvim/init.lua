@@ -24,26 +24,45 @@ require("plugman").setup({
 	{ "nvim-lualine/lualine.nvim",                   "plugin" },
 	{ "yavorski/lualine-macro-recording.nvim",       "plugin" },
 	{ "linrongbin16/lsp-progress.nvim",              "plugin" },
+	{ "tpope/vim-repeat",                            "plugin" },
+	{ "ggandor/leap.nvim",                           "plugin" },
+	{ "ggandor/flit.nvim",                           "plugin" },
 	{ "smoka7/hop.nvim",                             "plugin" },
-	{ "yetone/avante",                               "plugin" },
-	{ "github/copilot.vim",                          "plugin" },
+	{ "nvim-lua/plenary.nvim",                       "plugin" },
+	{ "antoinemadec/FixCursorHold.nvim",             "plugin" },
+	{ "nvim-neotest/neotest",                        "plugin" },
+	{ "nvim-neotest/nvim-nio",                       "plugin" },
+	{ "rouge8/neotest-rust",                         "plugin" },
+	{ "mfussenegger/nvim-dap",                       "plugin" },
+	{ "rcarriga/nvim-dap-ui",                        "plugin" },
+	{ "theHamsta/nvim-dap-virtual-text",             "plugin" },
 })
 
 require("core.options")
 require("core.keymaps")
 require("core.lsp")
 
-require("plugins.mini")
-require("plugins.fzf")
-require("plugins.catppuccin")
--- require("plugins.vscode")
-require("plugins.conform")
-require("plugins.illuminate")
-require("plugins.yanky")
-require("plugins.crates")
-require("plugins.treesitter")
-require("plugins.autopairs")
-require("plugins.cmp")
-require("plugins.lualine")
-require("plugins.indent-blankline")
-require("plugins.hop")
+if vim.g.vscode then
+	require("plugins.hop")
+	require("plugins.flit")
+	require("plugins.treesitter")
+else
+	require("plugins.mini")
+	require("plugins.fzf")
+	require("plugins.catppuccin")
+	require("plugins.conform")
+	require("plugins.illuminate")
+	require("plugins.yanky")
+	require("plugins.crates")
+	require("plugins.treesitter")
+	require("plugins.autopairs")
+	require("plugins.cmp")
+	require("plugins.lualine")
+	require("plugins.indent-blankline")
+	require("plugins.hop")
+	require("plugins.flit")
+	require("plugins.neotest")
+	require("plugins.dap")
+end
+
+vim.cmd.colorscheme("vscode")

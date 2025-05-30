@@ -8,8 +8,7 @@ vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
 vim.o.clipboard = "unnamed"
 
--- NOTE: Setting vim options can be opinionated.
--- While options above are crucial to make this whole config work as expected,
+-- NOTE: Setting vim options can be opinionated. While options above are crucial to make this whole config work as expected,
 -- below are just list of options I think most users will satisfy.
 -- Feel free to modify as your preference.
 
@@ -42,8 +41,8 @@ vim.o.smartcase = true                 -- , until search pattern contains upper 
 
 vim.o.smartindent = true               -- auto-indenting when starting a new line
 vim.o.shiftround = true                -- round indent to multiple of 'shiftwidth'
-vim.o.shiftwidth = 2                   -- 0 to follow the 'tabstop' value
-vim.o.tabstop = 2                      -- tab width
+vim.o.shiftwidth = 4                   -- 0 to follow the 'tabstop' value
+vim.o.tabstop = 4                      -- tab width
 
 vim.o.undofile = true                  -- enable persistent undo
 vim.o.undolevels = 10000               -- 10x more undo levels
@@ -55,3 +54,5 @@ vim.g.maplocalleader = vim.keycode("<cr>")
 
 -- remove netrw banner for cleaner looking
 vim.g.netrw_banner = 0
+
+vim.o.background = "light"

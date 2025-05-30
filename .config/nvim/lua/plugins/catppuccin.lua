@@ -45,4 +45,9 @@ require('catppuccin').setup({
 	,
 })
 
-vim.cmd.colorscheme("catppuccin-frappe")
+vim.api.nvim_create_autocmd("ColorScheme", {
+	pattern = "catppuccin",
+	callback = function()
+		require("fzf-lua").setup({ fzf_colors = true })
+	end,
+})

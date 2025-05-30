@@ -70,8 +70,3 @@ require('nvim-treesitter.configs').setup({
 		},
 	},
 })
-
-require('treesitter-context').setup({
-	mode = "cursor",
-	max_lines = 3,
-})

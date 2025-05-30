@@ -10,7 +10,7 @@ require("lualine").setup({
 		always_divide_middle = true,
 	},
 	sections = {
-		lualine_a = { 'mode' },
+		lualine_a = {},
 		lualine_b = { 'branch' },
 		lualine_c = { { "macro_recording", "%S" }, { "filename", path = 1 }, { function()
 			return require('lsp-progress').progress()

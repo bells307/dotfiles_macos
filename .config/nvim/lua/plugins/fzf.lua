@@ -1,7 +1,23 @@
 -- fzf-lua
 -- https://github.com/ibhagwan/fzf-lua
 local fzf = require("fzf-lua")
-fzf.setup()
+fzf.setup({
+	fzf_colors = {
+		["fg"]      = { "fg", "Normal" },
+		["bg"]      = { "bg", "Normal" },
+		["hl"]      = { "fg", "Comment" },
+		["fg+"]     = { "fg", "Normal" },
+		["bg+"]     = { "bg", "CursorLine" },
+		["hl+"]     = { "fg", "Function" },
+		["info"]    = { "fg", "Type" },
+		["prompt"]  = { "fg", "Identifier" },
+		["pointer"] = { "fg", "DiagnosticHint" },
+		["marker"]  = { "fg", "Keyword" },
+		["spinner"] = { "fg", "Label" },
+		["header"]  = { "fg", "Comment" },
+		["border"]  = { "fg", "FloatBorder" },
+	}
+})
 
 vim.keymap.set("n", "<leader>ff", fzf.files, { desc = "Files" })
 vim.keymap.set("n", "<leader>f.", function()

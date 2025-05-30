@@ -6,7 +6,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.diagnostic.config({
 			virtual_text = true,
 			underline = true,
-			float = { border = "rounded" },
+			float = {
+				border = "single", -- "single", "double", "shadow", "none"
+			},
 		})
 
 		local map = function(keys, func, desc)
@@ -48,7 +50,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 	end,
 })
-
 
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('gopls')
